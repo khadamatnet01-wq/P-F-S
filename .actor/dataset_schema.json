@@ -1,73 +1,28 @@
 {
   "actorSpecification": 1,
   "fields": {
-    "url": {
-      "type": "string",
-      "description": "رابط الإعلان"
-    },
-    "title": {
-      "type": "string",
-      "description": "عنوان الإعلان"
-    },
-    "priceSar": {
-      "type": "string",
-      "description": "السعر بالريال السعودي"
-    },
-    "listingType": {
-      "type": "string",
-      "description": "نوع العملية: buy أو rent"
-    },
-    "propertyType": {
-      "type": "string",
-      "description": "نوع العقار"
-    },
-    "city": {
-      "type": "string",
-      "description": "المدينة"
-    },
-    "district": {
-      "type": "string",
-      "description": "الحي"
-    },
-    "bedrooms": {
-      "type": "string",
-      "description": "عدد غرف النوم"
-    },
-    "bathrooms": {
-      "type": "string",
-      "description": "عدد دورات المياه"
-    },
-    "areaSqm": {
-      "type": "string",
-      "description": "المساحة بالمتر المربع"
-    },
-    "phone": {
-      "type": "string",
-      "description": "رقم هاتف المعلن أو الوسيط"
-    },
-    "agentName": {
-      "type": "string",
-      "description": "اسم المعلن أو الوسيط"
-    },
-    "description": {
-      "type": "string",
-      "description": "وصف العقار"
-    },
-    "postedAt": {
-      "type": "string",
-      "description": "تاريخ نشر الإعلان بصيغة ISO"
-    },
-    "postedAtFormatted": {
-      "type": "string",
-      "description": "تاريخ نشر الإعلان بتوقيت الرياض"
-    },
-    "source": {
-      "type": "string",
-      "description": "مصدر الإعلان"
-    },
-    "scannedAt": {
-      "type": "string",
-      "description": "وقت استخراج الإعلان"
-    }
-  }
-}
+    "type": "object",
+    "properties": {
+      "url": {
+        "type": "string",
+        "description": "رابط الإعلان"
+      },
+      "title": {
+        "type": "string",
+        "description": "عنوان الإعلان"
+      },
+      "priceSar": {
+        "type": "string",
+        "description": "السعر بالريال السعودي"
+      },
+      "listingType": {
+        "type": "string",
+        "description": "نوع العملية: buy أو rent"
+      },
+      "propertyType": {
+        "type": "string",
+        "description": "نوع العقار"
+      },
+      "city": {
+        "type": "string",
+        "description": "المدينة"
