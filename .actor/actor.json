@@ -1,0 +1,13 @@
+{
+  "actorSpecification": 1,
+  "name": "property-finder-saudi",
+  "title": "Property Finder Saudi Scraper",
+  "description": "استخراج إعلانات العقارات من Property Finder Saudi حسب المدينة والحي ونوع العملية والعقار، مع محاولة استخراج تاريخ الإعلان ورقم الهاتف.",
+  "version": "1.0",
+  "buildTag": "latest",
+  "meta": {
+    "templateId": "property-finder-saudi"
+  },
+  "input": "./input_schema.json",
+  "dockerfile": "./Dockerfile"
+}
