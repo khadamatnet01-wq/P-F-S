@@ -1,6 +1,5 @@
 import { Actor } from 'apify';
-import { PlaywrightCrawler, log } from 'crawlee';
-
+import { PlaywrightCrawler, log } from 'crawlee/playwright';
 await Actor.init();
 
 const input = (await Actor.getInput()) || {};
