@@ -1,0 +1,73 @@
+{
+  "actorSpecification": 1,
+  "fields": {
+    "url": {
+      "type": "string",
+      "description": "رابط الإعلان"
+    },
+    "title": {
+      "type": "string",
+      "description": "عنوان العقار"
+    },
+    "priceSar": {
+      "type": "string",
+      "description": "السعر بالريال السعودي"
+    },
+    "listingType": {
+      "type": "string",
+      "description": "للبيع أو للإيجار"
+    },
+    "propertyType": {
+      "type": "string",
+      "description": "نوع العقار"
+    },
+    "city": {
+      "type": "string",
+      "description": "المدينة"
+    },
+    "district": {
+      "type": "string",
+      "description": "الحي"
+    },
+    "bedrooms": {
+      "type": "string",
+      "description": "عدد غرف النوم"
+    },
+    "bathrooms": {
+      "type": "string",
+      "description": "عدد دورات المياه"
+    },
+    "areaSqm": {
+      "type": "string",
+      "description": "المساحة"
+    },
+    "phone": {
+      "type": "string",
+      "description": "رقم الهاتف"
+    },
+    "agentName": {
+      "type": "string",
+      "description": "اسم المعلن أو الوسيط"
+    },
+    "description": {
+      "type": "string",
+      "description": "وصف الإعلان"
+    },
+    "postedAt": {
+      "type": "string",
+      "description": "التاريخ الخام لنشر الإعلان"
+    },
+    "postedAtFormatted": {
+      "type": "string",
+      "description": "تاريخ النشر بتوقيت الرياض"
+    },
+    "source": {
+      "type": "string",
+      "description": "مصدر البيانات"
+    },
+    "scannedAt": {
+      "type": "string",
+      "description": "وقت الفحص"
+    }
+  }
+}
