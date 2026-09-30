@@ -1,9 +1,11 @@
 FROM apify/actor-node-playwright-chrome:18
 
+WORKDIR /home/myuser
+
 COPY package*.json ./
 
 RUN npm install --omit=dev
 
-COPY . ./
+COPY . .
 
 CMD ["npm", "start"]
