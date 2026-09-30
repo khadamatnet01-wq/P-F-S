@@ -1,15 +1,13 @@
 {
+  "actorSpecification": 1,
   "name": "property-finder-saudi",
-  "version": "1.0.0",
-  "description": "Property Finder Saudi scraper",
-  "type": "module",
-  "main": "src/main.js",
-  "scripts": {
-    "start": "node src/main.js"
+  "title": "Property Finder Saudi Scraper",
+  "description": "استخراج إعلانات العقارات من Property Finder Saudi حسب المدينة والحي ونوع العملية والعقار، مع محاولة استخراج تاريخ الإعلان ورقم الهاتف.",
+  "version": "1.0",
+  "buildTag": "latest",
+  "input": "./input_schema.json",
+  "storages": {
+    "dataset": "./dataset_schema.json"
   },
-  "dependencies": {
-    "apify": "3.5.2",
-    "crawlee": "3.15.3",
-    "playwright": "1.55.0"
-  }
+  "dockerfile": "../Dockerfile"
 }
