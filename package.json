@@ -1,0 +1,15 @@
+{
+  "name": "property-finder-saudi",
+  "version": "1.0.0",
+  "description": "Property Finder Saudi scraper for Apify",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "apify": "^3.5.2",
+    "crawlee": "^3.15.3",
+    "playwright": "^1.52.0"
+  }
+}
