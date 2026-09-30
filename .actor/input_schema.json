@@ -1,0 +1,109 @@
+{
+  "title": "إعدادات سحب Property Finder Saudi",
+  "description": "البحث في Property Finder السعودية حسب المدينة والحي ونوع العملية والعقار",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "city": {
+      "title": "المدينة",
+      "type": "string",
+      "description": "اسم المدينة، مثال: الرياض، جدة، الدمام",
+      "default": "Riyadh",
+      "editor": "textfield"
+    },
+    "district": {
+      "title": "الحي",
+      "type": "string",
+      "description": "اسم الحي فقط، مثال: الياسمين، النرجس، الملقا. اتركه فارغًا للبحث في جميع الأحياء.",
+      "default": "",
+      "editor": "textfield"
+    },
+    "listingType": {
+      "title": "نوع العملية",
+      "type": "string",
+      "description": "اختر بيع أو إيجار",
+      "enum": [
+        "buy",
+        "rent"
+      ],
+      "enumTitles": [
+        "للبيع",
+        "للإيجار"
+      ],
+      "default": "buy",
+      "editor": "select"
+    },
+    "propertyType": {
+      "title": "نوع العقار",
+      "type": "string",
+      "description": "نوع العقار المطلوب",
+      "enum": [
+        "",
+        "apartment",
+        "villa",
+        "land",
+        "building"
+      ],
+      "enumTitles": [
+        "جميع العقارات",
+        "شقة",
+        "فيلا",
+        "أرض",
+        "عمارة"
+      ],
+      "default": "",
+      "editor": "select"
+    },
+    "maxResults": {
+      "title": "أقصى عدد للنتائج",
+      "type": "integer",
+      "description": "عدد الإعلانات التي تريد استخراجها",
+      "default": 20,
+      "minimum": 1,
+      "maximum": 500,
+      "editor": "number"
+    },
+    "todayOnly": {
+      "title": "إعلانات اليوم فقط",
+      "type": "boolean",
+      "description": "عند التفعيل، يحاول النظام استخراج الإعلانات المنشورة اليوم فقط بتوقيت الرياض",
+      "default": false,
+      "editor": "checkbox"
+    },
+    "maxPages": {
+      "title": "أقصى عدد صفحات",
+      "type": "integer",
+      "description": "عدد صفحات نتائج Property Finder التي سيتم فحصها. استخدم رقمًا أكبر عند البحث عن إعلانات اليوم.",
+      "default": 10,
+      "minimum": 1,
+      "maximum": 100,
+      "editor": "number"
+    },
+    "fetchPhoneFromDetail": {
+      "title": "استخراج رقم الهاتف",
+      "type": "boolean",
+      "description": "فتح صفحة الإعلان ومحاولة استخراج رقم الهاتف من رابط الاتصال أو بيانات الصفحة أو زر الاتصال",
+      "default": true,
+      "editor": "checkbox"
+    },
+    "proxyConfiguration": {
+      "title": "إعدادات البروكسي",
+      "type": "object",
+      "description": "استخدام Apify Residential Proxy لتقليل احتمالية الحجب",
+      "prefill": {
+        "useApifyProxy": true,
+        "groups": [
+          "RESIDENTIAL"
+        ]
+      },
+      "editor": "proxy"
+    },
+    "webhookUrl": {
+      "title": "رابط Webhook",
+      "type": "string",
+      "description": "اختياري. رابط يستقبل إشعارًا عند انتهاء السحب",
+      "default": "",
+      "editor": "textfield"
+    }
+  }
+}
