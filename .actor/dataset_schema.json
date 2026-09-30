@@ -26,3 +26,130 @@
       "city": {
         "type": "string",
         "description": "المدينة"
+      },
+      "district": {
+        "type": "string",
+        "description": "الحي"
+      },
+      "bedrooms": {
+        "type": "string",
+        "description": "عدد غرف النوم"
+      },
+      "bathrooms": {
+        "type": "string",
+        "description": "عدد دورات المياه"
+      },
+      "areaSqm": {
+        "type": "string",
+        "description": "المساحة بالمتر المربع"
+      },
+      "phone": {
+        "type": "string",
+        "description": "رقم هاتف المعلن أو الوسيط"
+      },
+      "agentName": {
+        "type": "string",
+        "description": "اسم المعلن أو الوسيط"
+      },
+      "description": {
+        "type": "string",
+        "description": "وصف العقار"
+      },
+      "postedAt": {
+        "type": "string",
+        "description": "تاريخ نشر الإعلان بصيغة ISO"
+      },
+      "postedAtFormatted": {
+        "type": "string",
+        "description": "تاريخ نشر الإعلان بتوقيت الرياض"
+      },
+      "source": {
+        "type": "string",
+        "description": "مصدر الإعلان"
+      },
+      "scannedAt": {
+        "type": "string",
+        "description": "وقت استخراج الإعلان"
+      }
+    }
+  },
+  "views": {
+    "overview": {
+      "title": "نظرة عامة",
+      "transformation": {
+        "fields": [
+          "title",
+          "priceSar",
+          "listingType",
+          "propertyType",
+          "city",
+          "district",
+          "bedrooms",
+          "bathrooms",
+          "areaSqm",
+          "phone",
+          "agentName",
+          "postedAtFormatted",
+          "url"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "title": {
+            "label": "العنوان",
+            "format": "text"
+          },
+          "priceSar": {
+            "label": "السعر (ريال)",
+            "format": "text"
+          },
+          "listingType": {
+            "label": "العملية",
+            "format": "text"
+          },
+          "propertyType": {
+            "label": "نوع العقار",
+            "format": "text"
+          },
+          "city": {
+            "label": "المدينة",
+            "format": "text"
+          },
+          "district": {
+            "label": "الحي",
+            "format": "text"
+          },
+          "bedrooms": {
+            "label": "غرف النوم",
+            "format": "text"
+          },
+          "bathrooms": {
+            "label": "دورات المياه",
+            "format": "text"
+          },
+          "areaSqm": {
+            "label": "المساحة (م²)",
+            "format": "text"
+          },
+          "phone": {
+            "label": "الهاتف",
+            "format": "text"
+          },
+          "agentName": {
+            "label": "المعلن",
+            "format": "text"
+          },
+          "postedAtFormatted": {
+            "label": "تاريخ النشر",
+            "format": "text"
+          },
+          "url": {
+            "label": "الرابط",
+            "format": "text"
+          }
+        }
+      }
+    }
+  }
+          }
