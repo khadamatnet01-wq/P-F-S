@@ -2,13 +2,14 @@
   "name": "property-finder-saudi",
   "version": "1.0.0",
   "description": "Property Finder Saudi scraper",
-  "main": "main.js",
+  "type": "module",
+  "main": "src/main.js",
   "scripts": {
-    "start": "node main.js"
+    "start": "node src/main.js"
   },
   "dependencies": {
-    "apify": "^3.4.0",
-    "crawlee": "^3.15.0",
+    "apify": "^3.5.2",
+    "crawlee": "^3.15.3",
     "playwright": "^1.55.0"
   }
 }
