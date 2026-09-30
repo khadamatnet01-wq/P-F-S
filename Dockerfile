@@ -1,6 +1,6 @@
 FROM apify/actor-node-playwright-chrome:18
 
-WORKDIR /home/myuser
+WORKDIR /usr/src/app
 
 COPY package*.json ./
 
