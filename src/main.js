@@ -1,5 +1,5 @@
 import { Actor } from 'apify';
-import { PlaywrightCrawler, log } from 'crawlee';
+import { PlaywrightCrawler, log } from '@crawlee/playwright';
 
 await Actor.init();
 
@@ -15,7 +15,7 @@ const maxPages = Number(input.maxPages || 10);
 const fetchPhone = input.fetchPhoneFromDetail !== false;
 const webhookUrl = (input.webhookUrl || '').trim();
 
-// إعداد البروكسي مع التوافق مع صيغة Apify Proxy الحديثة والسابقة
+// إعداد البروكسي مع التوافق التام والبديل التلقائي في حال عدم توفر RESIDENTIAL
 const rawProxyConfig = input.proxyConfiguration || {
     useApifyProxy: true,
     apifyProxyGroups: ['RESIDENTIAL'],
@@ -29,7 +29,12 @@ let proxyConfiguration;
 try {
     proxyConfiguration = await Actor.createProxyConfiguration(rawProxyConfig);
 } catch (err) {
-    log.warning(`⚠️ تعذر تفعيل البروكسي المخصص (${err.message})، سيتم المتابعة بدون بروكسي أو بالإعداد الافتراضي.`);
+    log.warning(`⚠️ تعذر تفعيل البروكسي المخصص (${err.message})، جاري التحويل إلى Apify Proxy الافتراضي...`);
+    try {
+        proxyConfiguration = await Actor.createProxyConfiguration({ useApifyProxy: true });
+    } catch {
+        proxyConfiguration = undefined;
+    }
 }
 
 const seen = new Set();
@@ -525,6 +530,12 @@ const crawler = new PlaywrightCrawler({
     maxConcurrency: 2,
     requestHandlerTimeoutSecs: 120,
     navigationTimeoutSecs: 60000,
+    launchContext: {
+        launchOptions: {
+            headless: true,
+            args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
+        },
+    },
 
     async requestHandler({ page, request, log: reqLog }) {
         // =================================================
